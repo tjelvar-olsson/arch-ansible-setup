@@ -8,7 +8,7 @@ xset -b
 [[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
 
 # Source the solarized color scheme
-[[ -f /usr/share/colors/solarized/xresources-colors-solarized ]] && xrdb -merge /usr/share/colors/solarized/xresources-colors-solarized
+[[ -f /usr/share/colors/solarized/xresources-colors-solarized/Xresources ]] && xrdb -merge /usr/share/colors/solarized/xresources-colors-solarized/Xresources
 
 # Set the backgroud to black.
 xsetroot -solid black &
