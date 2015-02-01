@@ -4,6 +4,8 @@ Ansible script for configuring Arch linux installation.
 Install prerequisite packages:
 
 ```bash
+pacman -Syu
+pacman -S git
 pacman -S ansible
 ```
 
