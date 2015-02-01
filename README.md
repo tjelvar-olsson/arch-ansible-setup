@@ -7,6 +7,14 @@ Install prerequisite packages:
 pacman -Syu
 pacman -S git
 pacman -S ansible
+pacman -S ntp
+```
+
+Set the time.
+
+```bash
+systemctl enable ntpd
+systemctl start ntpd
 ```
 
 Sort out passwordless ssh.
