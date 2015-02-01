@@ -12,7 +12,7 @@ Sort out passwordless ssh.
 ```bash
 ssh-keygen
 cd .ssh
-cat id_rsa.pub >> authrized_keys
+cat id_rsa.pub >> authorized_keys
 ```
 
 
