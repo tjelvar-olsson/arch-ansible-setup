@@ -1,0 +1,10 @@
+---
+# Install and configure surfraw.
+
+- name: install surfraw
+  pacman: name=surfraw
+          state=present
+
+- name: add the .surfraw.conf file to the user's home directory
+  copy: src=surfraw.conf
+        dest=/home/{{ user_name }}/.surfraw.conf

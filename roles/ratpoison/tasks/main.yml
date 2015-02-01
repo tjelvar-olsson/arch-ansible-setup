@@ -1,0 +1,19 @@
+---
+# Install and configure ratpoison.
+
+- name: install ratpoison
+  pacman: name=ratpoison
+          state=present
+
+- name: add the .ratpoisonrc file to the user's home directory
+  copy: src=ratpoisonrc
+        dest=/home/{{ user_name }}/.ratpoisonrc
+
+- name: create the /usr/share/xsessions directory
+  file: path=/usr/share/xsessions
+        state=directory
+
+- name: copy the ratpoison.desktop file to the xsessions dir
+  command: cp /etc/X11/sessions/ratpoison.desktop /usr/share/xsessions
+  args:
+    creates: /usr/share/xsessions/ratpoison.desktop

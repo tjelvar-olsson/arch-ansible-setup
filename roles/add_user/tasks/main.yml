@@ -1,0 +1,10 @@
+---
+# Add a user.
+
+- name: add the sudo group
+  group: name=sudo
+         state=present
+
+- name: add the user
+  user: name={{ user_name }}
+        groups=sudo

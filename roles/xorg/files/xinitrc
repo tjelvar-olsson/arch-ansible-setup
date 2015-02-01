@@ -1,0 +1,17 @@
+# Set the keyboard layout.
+setxkbmap -layout gb
+
+# Turn off the bell.
+xset -b
+
+# Source the Xresources.
+[[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
+
+# Source the solarized color scheme
+[[ -f /usr/share/colors/solarized/xresources-colors-solarized ]] && xrdb -merge /usr/share/colors/solarized/xresources-colors-solarized
+
+# Set the backgroud to black.
+xsetroot -solid black &
+
+# Start ratpoison.
+exec /usr/bin/ratpoison

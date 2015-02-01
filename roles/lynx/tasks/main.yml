@@ -1,0 +1,14 @@
+---
+# Install and configure lynx.
+
+- name: install lynx
+  pacman: name=lynx
+          state=present
+
+- name: add the .lynxrc file to the user's home directory
+  copy: src=lynxrc
+        dest=/home/{{ user_name }}/.lynxrc
+
+- name: add the .lynx.lss file to the user's home directory
+  copy: src=lynx.lss
+        dest=/home/{{ user_name }}/.lynx.lss

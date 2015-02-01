@@ -1,0 +1,10 @@
+---
+# Install and configure screen.
+
+- name: install screen
+  pacman: name=screen
+          state=present
+
+- name: add the .screenrc file to the user's home directory
+  copy: src=screenrc
+        dest=/home/{{ user_name }}/.screenrc

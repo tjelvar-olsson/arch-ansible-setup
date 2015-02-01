@@ -1,0 +1,37 @@
+---
+# Install and configure surfraw.
+
+- name: install xorg packages
+  pacman: name={{ item }}
+          state=present
+  with_items:
+    - xorg-server
+    - xorg-server-utils
+    - xorg-apps
+    - xorg-xinit
+
+- name: install xterm
+  pacman: name=xterm
+          state=present
+
+- name: add the .Xresources file to the user's home directory
+  copy: src=Xresources
+        dest=/home/{{ user_name }}/.Xresources
+
+- name: create a /usr/share/colors/ directory
+  file: path=/usr/share/colors
+        state=directory
+
+- name: download the solarized color scheme
+  get_url: url=http://ethanschoonover.com/solarized/files/solarized.zip
+           dest=/usr/share/colors/solarized.zip
+
+- name: unzip the solarized color scheme
+  command: unzip /usr/share/colors/solarized.zip
+  args:
+    chdir: /usr/share/colors/
+    creates: /usr/share/colors/solarized/LICENSE
+
+- name: add the .xinitrc file to the user's home directory
+  copy: src=xinitrc
+        dest=/home/{{ user_name }}/.xinitrc

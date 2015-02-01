@@ -1,0 +1,6 @@
+startup_message off
+vbell off
+#caption always "%n(%t): %C"
+hardstatus string "%{= Kd} %{= Kd}%-w%{= Kr}[%{= KW}%n %t%{= Kr}]%{= Kd}%+w %-= %{KG} %H%{KW}|%{KY}%101`%{KW}|%D %M %d %Y%{= Kc} %C%A%{-}"
+hardstatus on
+hardstatus alwayslastline
