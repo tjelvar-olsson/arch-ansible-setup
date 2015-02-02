@@ -9,6 +9,7 @@
     - xorg-server-utils
     - xorg-apps
     - xorg-xinit
+    - xf86-video-fbdev
 
 - name: install xterm
   pacman: name=xterm
