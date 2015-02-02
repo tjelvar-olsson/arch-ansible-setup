@@ -1,5 +1,5 @@
 # arch-ansible-setup
-Ansible script for configuring Arch linux installation.
+Ansible script for configuring Arch linux installation. Tailored for the Rasberry Pi.
 
 Install prerequisite packages:
 
