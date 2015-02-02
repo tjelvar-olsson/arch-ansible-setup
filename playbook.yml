@@ -2,6 +2,9 @@
 # Configure a base Arch system from scratch.
 - hosts: local
   roles:
+  - vconsole
+  - localegen
+  - base_packages
   - add_user
   - vim
   - lynx

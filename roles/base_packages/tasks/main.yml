@@ -1,0 +1,8 @@
+---
+# Install base packages.
+
+- name: install base packages
+  pacman: name={{ item }}
+          state=present
+  with_items:
+    - unzip

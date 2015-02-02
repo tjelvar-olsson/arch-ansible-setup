@@ -1,0 +1,7 @@
+---
+# Conifgure the virutal console.
+
+- name: add the /etc/vconsole.conf file
+  copy: src=vconsole.conf
+        dest=/etc/
+
