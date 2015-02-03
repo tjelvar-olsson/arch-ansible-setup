@@ -1,5 +1,7 @@
 # Rebind the terminal command to start screen by default.
 bind c exec xterm -e screen -R
 
+bind w exec midori
+
 # Always try to attach to an existing screen session when starting xterm.
 exec xterm -e screen -R
