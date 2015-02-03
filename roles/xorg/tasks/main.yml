@@ -10,6 +10,8 @@
     - xorg-apps
     - xorg-xinit
     - xf86-video-fbdev
+    - mesa
+    - xf86-video-vesa
 
 - name: install xterm
   pacman: name=xterm
