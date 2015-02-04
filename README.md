@@ -22,13 +22,13 @@ ls /etc/netctl
 netctl enable wlan-network-name
 ```
 
-Install prerequisite packages:
+Update the system.
 
 ```bash
 pacman -Syu
 ```
 
-Install prerequisite packages:
+Install prerequisite packages.
 
 ```bash
 pacman -S git
