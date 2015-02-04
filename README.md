@@ -49,6 +49,7 @@ Sort out passwordless ssh.
 ssh-keygen
 cd .ssh
 cat id_rsa.pub >> authorized_keys
+cd
 ```
 
 Clone this repository.
