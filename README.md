@@ -86,4 +86,6 @@ reboot
 
 ##TODO
 
-1. Add bashrc role (lynx, rm aliases)
+- More vim configuration, NERDTree etc
+- Extend .bashrc file
+- Role for installing and configuring mutt
