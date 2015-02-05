@@ -1,0 +1,4 @@
+
+# My aliases
+alias rm='rm -i'
+alias lynx='lynx -lss ~/.lynx.lss'

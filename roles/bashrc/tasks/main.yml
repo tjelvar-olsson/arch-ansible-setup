@@ -1,0 +1,7 @@
+---
+# Configure the .bashrc file
+
+- name: add the .bashrc file
+  copy: src=bashrc
+        dest=/home/{{ user_name }}/.bashrc
+        owner={{ user_name }}
