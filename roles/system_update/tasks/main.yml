@@ -1,5 +1,0 @@
----
-# Update the system.
-
-- name: update the pacman cache
-  pacman: update_cache=yes
