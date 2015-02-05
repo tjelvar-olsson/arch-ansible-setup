@@ -65,8 +65,25 @@ cd arch-ansible-setup
 ansible-playbook -i hosts playbook.yml --extra-vars="user_name=alice"
 ```
 
+Update the password of the newly created user.
+
+```bash
+passwd alice
+```
+
+Edit the ``/etc/sudoers`` file using visudo to enable members of the sudo
+groups to execute any command.
+
+```bash
+visudo
+```
+
+Reboot the machine.
+
+```bash
+reboot
+```
+
 ##TODO
 
 1. Add bashrc role (lynx, rm aliases)
-2. Add font configuration (ubuntu)
-3. Add login manager
