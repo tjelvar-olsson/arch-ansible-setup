@@ -1,0 +1,7 @@
+---
+
+- name: install the ubuntu font
+  pacman: name={{ item }}
+          state=present
+  with_items:
+    - ttf-ubuntu-font-family
