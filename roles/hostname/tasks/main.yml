@@ -1,0 +1,6 @@
+---
+# Configure the hostname.
+
+- name: configure the hostname
+  copy: src=hostname
+        dest=/etc/hostname

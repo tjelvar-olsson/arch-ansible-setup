@@ -1,0 +1,10 @@
+---
+# Install and configure the SLiM display/login manager.
+
+- name: install slim
+  pacman: name=slim
+          state=present
+
+- name: enable slim
+  service: name=slim
+           enabled=yes
