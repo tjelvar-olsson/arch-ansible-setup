@@ -8,6 +8,8 @@
 - name: add the .ratpoisonrc file to the user's home directory
   copy: src=ratpoisonrc
         dest=/home/{{ user_name }}/.ratpoisonrc
+        owner={{ user_name }}
+        group={{ user_name }}
 
 - name: create the /usr/share/xsessions directory
   file: path=/usr/share/xsessions

@@ -8,3 +8,5 @@
 - name: add the .screenrc file to the user's home directory
   copy: src=screenrc
         dest=/home/{{ user_name }}/.screenrc
+        owner={{ user_name }}
+        group={{ user_name }}

@@ -8,7 +8,11 @@
 - name: add the .lynxrc file to the user's home directory
   copy: src=lynxrc
         dest=/home/{{ user_name }}/.lynxrc
+        owner={{ user_name }}
+        group={{ user_name }}
 
 - name: add the .lynx.lss file to the user's home directory
   copy: src=lynx.lss
         dest=/home/{{ user_name }}/.lynx.lss
+        owner={{ user_name }}
+        group={{ user_name }}

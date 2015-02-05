@@ -8,3 +8,5 @@
 - name: add the .surfraw.conf file to the user's home directory
   copy: src=surfraw.conf
         dest=/home/{{ user_name }}/.surfraw.conf
+        owner={{ user_name }}
+        group={{ user_name }}

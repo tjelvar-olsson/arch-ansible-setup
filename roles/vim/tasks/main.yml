@@ -8,3 +8,5 @@
 - name: add the .vimrc file to the user's home directory
   copy: src=vimrc
         dest=/home/{{ user_name }}/.vimrc
+        owner={{ user_name }}
+        group={{ user_name }}

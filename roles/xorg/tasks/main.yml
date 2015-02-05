@@ -20,6 +20,8 @@
 - name: add the .Xresources file to the user's home directory
   copy: src=Xresources
         dest=/home/{{ user_name }}/.Xresources
+        owner={{ user_name }}
+        group={{ user_name }}
 
 - name: create a /usr/share/colors/ directory
   file: path=/usr/share/colors
@@ -38,3 +40,5 @@
 - name: add the .xinitrc file to the user's home directory
   copy: src=xinitrc
         dest=/home/{{ user_name }}/.xinitrc
+        owner={{ user_name }}
+        group={{ user_name }}
