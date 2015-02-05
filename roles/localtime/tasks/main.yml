@@ -1,0 +1,6 @@
+---
+# Configure the local time.
+
+- name: configure the local time
+  file: src=/usr/share/zoneinfo/Europe/London
+        dest=/etc/localtime

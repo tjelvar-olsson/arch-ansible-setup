@@ -4,6 +4,7 @@
   roles:
     - vconsole
     - localegen
+    - localtime
     - base_packages
     - add_user
     - vim
