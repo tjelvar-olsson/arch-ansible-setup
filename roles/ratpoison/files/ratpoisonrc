@@ -1,3 +1,6 @@
+# Turn off the startup message.
+startup_message off
+
 # Rebind the terminal command to start screen by default.
 bind c exec xterm -e screen -R
 
