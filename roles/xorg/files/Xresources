@@ -2,7 +2,14 @@ xterm*visualBell: false
 xterm*termName: xterm-256color
 xterm*reverseVideo: off
 xterm*locale: true
-xterm*faceName: Ubuntu Mono:anialias=false
+xterm*faceName: Ubuntu Mono:antialias=true
 xterm*scrollBar: false
 xterm*borderwidth: 0
 xterm*scaleHeight: 1.05
+
+Xft.dpi: 96
+Xft.antialias: 1
+Xft.hinting: 1
+Xft.hintstyle: hintslight
+Xft.rgba: rgb
+Xft.lcdfilter: lcddefault
