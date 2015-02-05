@@ -1,6 +1,0 @@
----
-# Install and configure the midori browser.
-
-- name: install midori
-  pacman: name=midori
-          state=present
