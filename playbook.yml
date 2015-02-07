@@ -10,10 +10,10 @@
     - add_user
     - vim
     - lynx
-    - bashrc
     - surfraw
     - screen
     - mutt
+    - bashrc
     - xorg
     - fonts
     - ratpoison

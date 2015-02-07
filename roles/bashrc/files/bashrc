@@ -2,3 +2,4 @@
 # My aliases
 alias rm='rm -i'
 alias lynx='lynx -lss ~/.lynx.lss'
+alias mutt='LOCAL_CONFIG=spool /usr/bin/mutt'
