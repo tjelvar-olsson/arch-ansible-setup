@@ -1,0 +1,69 @@
+###########################################
+# General configuration.
+
+###########################################
+# Sort inbox.
+#
+set sort = reverse-threads
+set sort_aux = last-date-received
+
+###########################################
+# Refresh inbox.
+#
+bind index G imap-fetch-mail
+
+###########################################
+# Pager
+#
+set pager = "builtin"
+set pager_context = 10
+set pager_index_lines = 6
+set tilde
+set pager_stop = yes
+unset resolve
+set delete
+
+###########################################
+# Header
+#
+ignore *
+unignore from date subject to cc
+
+###########################################
+# Mime type support.
+# Works with ~/.mailcap
+#
+auto_view text/html application/x-shellscript image/gif image/png image/jpg
+
+###########################################
+# Composing.
+#
+set editor = "vim"
+set edit_headers
+
+###########################################
+# Address book.
+#
+set alias_file = "~/.mutt/aliases"
+source "~/.mutt/aliases"
+
+###########################################
+# Colors.
+#
+#source "~/.mutt/colors"
+
+###########################################                                                                                    
+# Macros
+#
+macro pager \cb <pipe-entry>'urlview'<enter> 'Follow links with urlview'
+
+###########################################
+# SSL settings
+#
+set ssl_starttls = yes
+set ssl_force_tls = yes
+
+###########################################
+# Local configs
+#
+source ~/.mutt/muttrc.local.$LOCAL_CONFIG

@@ -1,0 +1,4 @@
+set mbox_type=Maildir
+set folder=$MAIL
+set spoolfile=$MAIL
+set header_cache=~/.mutt/hcache/mutt

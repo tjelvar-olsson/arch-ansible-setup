@@ -1,0 +1,52 @@
+---
+# Install and configure the mutt email client.
+
+- name: install mutt
+  pacman: name=mutt
+          state=present
+
+- name: install urlview
+  pacman: name=urlview
+          state=present
+
+- name: copy across the .muttrc file
+  copy: src=muttrc
+        dest=/home/{{ user_name }}/.muttrc
+        owner={{ user_name }}
+        group={{ user_name }}
+
+- name: create the .mutt directory
+  file: path=/home/{{ user_name }}/.mutt
+        state=directory
+        owner={{ user_name }}
+        group={{ user_name }}
+
+- name: create the .mutt/hcache directory
+  file: path=/home/{{ user_name }}/.mutt/hcache
+        state=directory
+        owner={{ user_name }}
+        group={{ user_name }}
+
+- name: touch the .mutt/aliases file
+  file: path=/home/{{ user_name }}/.mutt/aliases
+        state=present
+        owner={{ user_name }}
+        group={{ user_name }}
+
+- name: copy across the muttrc.local.spool file
+  copy: src=muttrc.local.spool
+        dest=/home/{{ user_name }}/.mutt/
+        owner={{ user_name }}
+        group={{ user_name }}
+
+- name: copy across the .urlview file
+  copy: src=urlview
+        dest=/home/{{ user_name }}/.urlview
+        owner={{ user_name }}
+        group={{ user_name }}
+
+- name: copy across the .mailcap file
+  copy: src=mailcap
+        dest=/home/{{ user_name }}/.mailcap
+        owner={{ user_name }}
+        group={{ user_name }}
