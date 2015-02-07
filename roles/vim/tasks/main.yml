@@ -30,6 +30,6 @@
 
 - name: install NERDTree
   sudo: yes
-  sudo_user: {{ user_name }}
+  sudo_user: "{{ user_name }}"
   git: repo=https://github.com/scrooloose/nerdtree.git
        dest=/home/{{ user_name }}/.vim/bundle/nerdtree
