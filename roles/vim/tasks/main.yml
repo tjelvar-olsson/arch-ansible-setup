@@ -10,3 +10,26 @@
         dest=/home/{{ user_name }}/.vimrc
         owner={{ user_name }}
         group={{ user_name }}
+
+- name: create .vim/{autoload,bundle} directories
+  file: name={{ item }}
+        state=directory
+        owner={{ user_name }}
+        group={{ user_name }}
+  with_items:
+    - /home/{{ user_name }}/.vim
+    - /home/{{ user_name }}/.vim/autoload
+    - /home/{{ user_name }}/.vim/bundle
+  
+- name: install pathogen
+  get_url: url=https://tpo.pe/pathogen.vim
+           dest=/home/{{ user_name }}/.vim/autoload/pathogen.vim
+           mode=755
+           owner={{ user_name }}
+           group={{ user_name }}
+
+- name: install NERDTree
+  sudo: yes
+  sudo_user: {{ user_name }}
+  git: repo=https://github.com/scrooloose/nerdtree.git
+       dest=/home/{{ user_name }}/.vim/bundle/nerdtree

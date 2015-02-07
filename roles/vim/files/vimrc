@@ -1,2 +1,34 @@
 " Enable syntax highlighing
 syntax enable
+
+" Pathogen lets you manage your 'runtimepath' with ease.
+" It is needed for NERDtree.
+" https://github.com/tpope/vim-pathogen
+execute pathogen#infect()
+
+" NERDtree allows you to explore your file system and to open files and
+" directories.
+" NERDtree is installed in the ./vim/bundle directory.
+" https://github.com/scrooloose/nerdtree
+map <F9> :NERDTreeToggle<CR>
+imap <F9> <ESC>:NERDTreeToggle<CR>
+
+" Colorscheme
+"colorscheme desert
+
+" Turn on the spell checker by default.
+set spell
+" Add ctermfg that is missing in the defaults.
+highlight SpellBad term=reverse ctermbg=6 ctermfg=7 gui=undercurl guisp=Red
+highlight SpellRare term=reverse ctermbg=5 ctermfg=7 gui=undercurl guisp=Magenta
+
+" A more informative status line.
+set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%04l,%04v]\ [%p%%]\ [LEN=%L]
+set laststatus=2
+
+" Adding line numbers.
+set number
+set numberwidth=4
+                         
+" Mutt specific.
+au BufRead /tmp/mutt-* set tw=72
