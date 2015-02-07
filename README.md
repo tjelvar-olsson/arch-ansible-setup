@@ -86,6 +86,6 @@ reboot
 
 ##TODO
 
-- More vim configuration, NERDTree etc
+- Install and configure less with syntax highlighting
 - Extend .bashrc file
-- Role for installing and configuring mutt
+- Add vim ftplugin files
