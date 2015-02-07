@@ -8,6 +8,7 @@
 - name: install urlview
   pacman: name=urlview
           state=present
+  ignore_errors: yes
 
 - name: copy across the .muttrc file
   copy: src=muttrc
@@ -29,7 +30,7 @@
 
 - name: touch the .mutt/aliases file
   file: path=/home/{{ user_name }}/.mutt/aliases
-        state=present
+        state=touch
         owner={{ user_name }}
         group={{ user_name }}
 
