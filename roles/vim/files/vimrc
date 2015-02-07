@@ -20,6 +20,7 @@ imap <F9> <ESC>:NERDTreeToggle<CR>
 set spell
 " Add ctermfg that is missing in the defaults.
 highlight SpellBad term=reverse ctermbg=6 ctermfg=7 gui=undercurl guisp=Red
+highlight SpellCap term=reverse ctermbg=6 ctermfg=7 gui=undercurl guisp=Red
 highlight SpellRare term=reverse ctermbg=5 ctermfg=7 gui=undercurl guisp=Magenta
 
 " A more informative status line.
