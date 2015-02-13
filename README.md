@@ -3,9 +3,10 @@ Ansible script for configuring Arch linux installation. Tailored for the Rasberr
 
 ## Pre-amble
 
-From a clean noobs arch installation, login as root and reset the root password.
+From a clean noobs arch installation, login as root, set the keyboard layout and reset the root password.
 
 ```bash
+loadkeys uk
 passwd
 ```
 
